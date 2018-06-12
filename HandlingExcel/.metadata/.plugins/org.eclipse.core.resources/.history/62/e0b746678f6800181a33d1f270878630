@@ -1,0 +1,83 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class CheckSpecialCharacter {
+
+	public static void main(String[] args) {
+		String DisplayedText="Global navigation
+Level 1:
+You are here
+Home
+Level 1:
+About us
+Level 1:
+Feedback
+Level 1:
+Contacts
+Property Manager Login
+Sign in
+Register
+Terms of use
+Find out about registering
+
+
+You are here
+Home Look up your bond
+Primary Navigation
+Level 1:
+You are here
+Look up your bond
+Level 1:
+Lodge a bond
+Level 1:
+Find outstanding bond repayment
+Level 1:
+About forms
+Level 1:
+About Electronic Transactions
+Look Up Your Bond
+Enter your bond details to:
+View your bond
+Amend bond details
+Arrange a bond refund
+Transfer a bond
+View our Privacy Collection Notice
+Enter your details here:
+Bond or Electronic Transaction Number
+Forgot your bond number?
+Tenant Family Name
+Please indicate who you are:
+Agent
+Landlord
+Tenant
+Search for bond
+More rental information
+Renting on the Consumer Affairs Victoria website
+Residential Tenancies Bond Authority information hosted by Consumer Affairs Victoria
+Download the Consumer Affairs Victoria Rental App
+News
+All bond forms are processed within 2 business days of being received by us.
+Disclaimer
+Copyright
+Privacy Policy
+Collection Notice
+Accessibility
+Site map
+© Copyright 2015, State of Victoria, Australia
+Last Updated: 01 June 2015";
+		System.out.println("Displayed Text  is :"+DisplayedText);
+		Pattern pattern = Pattern.compile("[a-zA-Z0-9/:?©,. ]*");
+		Matcher matcher = pattern.matcher(DisplayedText);
+		if(matcher.matches()){
+			System.out.println("------------------------------------------------------- ");
+			System.out.println("Dosen't Contain any Special character");
+			
+		}
+		else {
+			
+			System.out.println("Displayed Special Characters : "+DisplayedText.replaceAll("[a-zA-Z0-9/:?©,. ]*", "").trim());
+		}
+
+	}
+
+}

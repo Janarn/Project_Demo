@@ -1,0 +1,24 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class SpecialCharacter {
+
+
+	public static void main(String[] args) {
+		String DisplayedText="abc/  : ? ©  , .$";
+		System.out.println("Displayed Text  is :"+DisplayedText);
+		Pattern pattern = Pattern.compile("[^!#$%&'()+,-./:;<=>?@_`{|}]");
+		Matcher matcher = pattern.matcher(DisplayedText);
+		if(matcher.matches()){
+			System.out.println("------------------------------------------------------- ");
+			System.out.println("Dosen't Contain any Special character");
+			
+		}
+		else {
+			
+			System.out.println("Displayed Special Characters : "+DisplayedText.replaceAll("[^$]*", "").trim());
+		}
+
+	}
+
+}
