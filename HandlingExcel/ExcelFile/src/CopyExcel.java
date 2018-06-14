@@ -78,6 +78,7 @@ public class CopyExcel {
                         cell.setCellValue((String) a.cellValue);
                         System.out.println(a.cellValue); 
                         System.out.println(a.cellValue); 
+                        System.out.println(a.cellValue);
                    
      				
      			}
