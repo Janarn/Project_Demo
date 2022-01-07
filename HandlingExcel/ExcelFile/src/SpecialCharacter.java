@@ -12,7 +12,7 @@ public class SpecialCharacter {
 		int index=DisplayedText.indexOf("/");
 		System.out.println(DisplayedText.indexOf("/"));
 		if(Character.isDigit(DisplayedText.charAt(index-1))&&Character.isDigit(DisplayedText.charAt(index+1))){
-			System.out.println("both characters are digits");
+			System.out.println("both characters are digit");
 		}
 		/*if(){
 			System.out.println("------------------------------------------------------- ");
